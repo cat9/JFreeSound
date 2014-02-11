@@ -1,6 +1,6 @@
 package com.miku.jfreesound.bean.requests;
 
-import org.apache.http.util.TextUtils;
+import com.miku.jfreesound.utils.TextUtils;
 
 import com.miku.jfreesound.bean.base.IBaseRequest;
 
