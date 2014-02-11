@@ -22,7 +22,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		JFreeSound fs=JFreeSound.getInstance();
-		fs.init("53633ecaaa244da79575c0131bda54e5");
+		fs.init("you apikey");
 		
 		
 		/**
