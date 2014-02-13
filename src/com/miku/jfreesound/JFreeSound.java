@@ -46,7 +46,7 @@ public class JFreeSound {
 		mApiKey = apiKey;
 	}
 
-	private String buildUrl(IBaseRequest rq) {
+	public String buildUrl(IBaseRequest rq) {
 		StringBuilder sb = new StringBuilder(URL_BASE);
 		String reqStr=rq.buildRequest();
 		sb.append(reqStr);
@@ -233,7 +233,6 @@ public class JFreeSound {
 		};
 		return execute(req, resultCallback, listener);
 	}
-	
 
 	public interface ResultCallback<T> {
 		public void onResult(RetResult<T> result);

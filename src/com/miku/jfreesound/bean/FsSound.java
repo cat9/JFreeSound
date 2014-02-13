@@ -2,7 +2,9 @@ package com.miku.jfreesound.bean;
 
 import org.json.JSONObject;
 
+import com.miku.jfreesound.JFreeSound;
 import com.miku.jfreesound.bean.base.AbstractHashMapData;
+import com.miku.jfreesound.bean.requests.RqGetOriginalFileUrl;
 
 public class FsSound extends AbstractHashMapData {
 
@@ -199,6 +201,12 @@ public class FsSound extends AbstractHashMapData {
 
 	public String getOriginal_filename() {
 		return get(DATA_ORIGINAL_FILENAME);
+	}
+	
+	public String getOriginal_file(){
+		RqGetOriginalFileUrl rq=new RqGetOriginalFileUrl();
+		rq.soundId=getId();
+		return JFreeSound.getInstance().buildUrl(rq);
 	}
 
 	public void setOriginal_filename(String original_filename) {
